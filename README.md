@@ -298,17 +298,18 @@ url:
 
 ## Create Address Type 
 
+	mutation{
+	    createAddressType(input:{name:"Shipping"}) {
+	      addressType{
+		id
+		name
+	      }
+	    }
+	  }
+	  
 
-	 mutation{
-    createAddressType(input:{name:"Shipping"}) {
-      addressType{
-        id
-        name
-      }
-    }
-  }
+## Update Address Type 
 
-# Create Address Type 
     mutation{
       updateAddressType(id:12,input:{name:"Billing"}){
         addressType{
@@ -318,6 +319,7 @@ url:
         success
       }
     }
+    
 
 ## Delete Address Type
     mutation{
