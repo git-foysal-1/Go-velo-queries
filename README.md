@@ -452,7 +452,7 @@ url:
     }
 
 
-## Update Contact Type
+## Delete Contact Type
     mutation{
       deleteContactType(id:3){
         success
@@ -586,6 +586,7 @@ url:
         success
       }
     }
+    
 
 # ``# Product Module ``
 ## Get All Product 
