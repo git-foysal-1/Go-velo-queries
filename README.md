@@ -175,7 +175,7 @@ url:
         name
         code
       }
-      allCurrencies{
+      Currencies{
         id
         name
         code
