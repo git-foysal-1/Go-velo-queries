@@ -170,7 +170,7 @@ url:
 ## Get Language & Currencies
 
     query{
-      allLanguages{
+     Languages{
         id
         name
         code
@@ -182,10 +182,10 @@ url:
       }
     }
 
-## Get All All Nomination Types
+## Get All Nomination Types
 
     query{
-      allNominationTypes{
+      NominationTypes{
         id
         name
 
@@ -216,7 +216,7 @@ url:
       }
     }
 
-## Delete  All Nomination Types
+## Delete All Nomination Types
 
     mutation{
       deleteNominationType(id:16){
@@ -228,7 +228,7 @@ url:
 
 ## Get All Nominations
     query{
-      allNominations{
+      Nominations{
         id
         nominee{
           id
@@ -333,7 +333,7 @@ url:
 
 ## Get All Product Types 
     query{
-      allProductTypes{
+      ProductTypes{
         id
         name
       }
@@ -378,7 +378,7 @@ url:
 ## Get all Product Rate Type
 
     query{
-      allProductRateTypes{
+      ProductRateTypes{
         id
         name
       }
@@ -419,7 +419,7 @@ url:
 
 ## Get All Contact Types
     query{
-      allContactTypes{
+      ContactTypes{
         id
         name
       }
