@@ -209,7 +209,7 @@ url:
 
     mutation{
       updateNominationType(id:16, input:{
-        name: "update  All Nomination Types"
+        name: "update Nomination Types"
         })
         {
         success
@@ -278,6 +278,7 @@ url:
           }
         }
       }
+      
 ## Delete Nomination
       mutation{
         deleteNomination(id:5){
@@ -288,9 +289,8 @@ url:
     
 ## Get All Address Type
 
-
-	query{
-      allAddressTypes{
+      query{
+      AddressTypes{
         id
         name
       }
@@ -463,7 +463,7 @@ url:
 ## Get All Contacts
 
     query{
-      allContacts{
+      Contacts{
         id
         contactedBy{
           id
@@ -525,7 +525,7 @@ url:
 ## Get All Shops 
 
     query{
-      allShops{
+      Shops{
         id
         name
         street
@@ -592,7 +592,7 @@ url:
 ## Get All Product 
 
     query{
-      allProducts{
+      Products{
         id
         name
         productType{
@@ -667,7 +667,7 @@ url:
 ## Get All Product Image 
 
     query{
-      allProductsImages{
+      ProductsImages{
         id
         image
         isDefault
