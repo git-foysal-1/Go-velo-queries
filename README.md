@@ -2,7 +2,46 @@ url:
 
     http://localhost:8000/graphql
 
+# ``#Users Module``
+## Create New User
+
+	mutation{
+          createUser(input:{username: "jwt_user_2", email: "jwt_user_2@gmail.com", password: "adminadmin", name: "jwt_user"}){
+            user{
+              id
+	      username
+	      name
+            }
+	    token
+	    refreshToken
+          }
+        }
+	
+## Update Existing User
+	mutation{
+          updateUser(input:{password: "adminadmin", name: "jwt_user"}){
+            user{
+              id
+	      username
+	      name
+            }
+	    token
+	    refreshToken
+          }
+        }
+	
+## Login
+	mutation{
+          tokenAuth(username: "jwt_user_2", password: "adminadmin"){
+	    token
+	    payload
+	    refreshExpiresIn
+          }
+        }
+
 # ``#Core Module``
+
+
 
 
 ## Get About Us 
