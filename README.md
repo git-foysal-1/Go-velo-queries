@@ -209,12 +209,12 @@ url:
 ## Get Language & Currencies
 
     query{
-     Languages{
+     languages{
         id
         name
         code
       }
-      Currencies{
+      currencies{
         id
         name
         code
@@ -329,7 +329,7 @@ url:
 ## Get All Address Type
 
       query{
-      AddressTypes{
+      addressTypes{
         id
         name
       }
@@ -372,7 +372,7 @@ url:
 
 ## Get All Product Types 
     query{
-      ProductTypes{
+      productTypes{
         id
         name
       }
@@ -417,7 +417,7 @@ url:
 ## Get all Product Rate Type
 
     query{
-      ProductRateTypes{
+      productRateTypes{
         id
         name
       }
@@ -458,7 +458,7 @@ url:
 
 ## Get All Contact Types
     query{
-      ContactTypes{
+      contactTypes{
         id
         name
       }
@@ -502,7 +502,7 @@ url:
 ## Get All Contacts
 
     query{
-      Contacts{
+      contacts{
         id
         contactedBy{
           id
@@ -564,7 +564,7 @@ url:
 ## Get All Shops 
 
     query{
-      Shops{
+      shops{
         id
         name
         street
@@ -631,7 +631,7 @@ url:
 ## Get All Product 
 
     query{
-      Products{
+      products{
         id
         name
         productType{
@@ -706,7 +706,7 @@ url:
 ## Get All Product Image 
 
     query{
-      ProductsImages{
+      productsImages{
         id
         image
         isDefault
