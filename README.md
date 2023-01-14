@@ -224,7 +224,7 @@ url:
 ## Get All Nomination Types
 
     query{
-      NominationTypes{
+      nominationTypes{
         id
         name
 
