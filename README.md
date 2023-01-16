@@ -255,10 +255,10 @@ url:
       }
     }
 
-## Delete All Nomination Types
+## Delete Nomination Types
 
     mutation{
-      deleteNominationType(id:16){
+      deleteNominationType(id:1){
         success
       }
     }
@@ -266,61 +266,63 @@ url:
 
 
 ## Get All Nominations
-    query{
-      Nominations{
-        id
-        nominee{
-          id
-          name
-          email
-        }
-        doner{
-          id
-          name
-          email
-        }
-        nominationType{
-          id
-          name 
-        }
-        reason
-      }
-    }
+   
+	query{
+	  nominations{
+	    id
+	    name
+	    nominationType{
+	      id 
+	      name
+	    }
+	    reason
+	  }
+	}
 
 ## Create Nomination
 
-    mutation{
-      createNomination(input:{
-        nominee:1
-        doner:2
-        nominationType:2
-        reason:"New Nomination"
-      }){
-        nomination{
-          id
-        }
-      }
-    }
+	mutation{
+	  createNomination(input:{
+	    name:"new nomination"
+	    nominationType:1
+	    reason:"shop related"
+	  })
+	  {
+	    nomination{
+	      id
+	      name
+	      reason
+	      nominationType{
+		id
+		name
+	      }
+	    }
+	    success
+	  }
+	}
+
 
 ## Update Nomination
 
-      mutation{
-        updateNomination(id:5, input:{
-          nominee:2
-          doner:1
-          nominationType:3
-          reason:"Update Nomination"
-        }){
-          nomination{
-            id
-    
-          }
-        }
-      }
+	mutation{
+	  updateNomination(id:1, input:{
+	    name:"update nomination"
+	    nominationType:1
+	    reason:"buy bike"
+	  })
+	  {
+	    nomination{
+	      id
+	      name    
+	    }
+	    success
+	  }
+	}
+
       
 ## Delete Nomination
       mutation{
-        deleteNomination(id:5){
+        deleteNomination(id:1){
           success
         }
       }
