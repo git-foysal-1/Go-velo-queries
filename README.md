@@ -501,62 +501,71 @@ url:
 
 ## Get All Contacts
 
-    query{
-      contacts{
-        id
-        contactedBy{
-          id
-          name
-          email
-        }
-        contactType{
-          id
-          name
-        }
-        contactMessage
-        contactedWith{
-          id
-          name
-          email
-        }
-      }
-    }
+	query{
+	  contacts{
+	    id
+	    name
+	    rentalBooking
+	    email
+	    contactType{
+	      id
+	      name
+	    }
+	  }
+	}
 
 ## Create Contact
 
-    mutation{
-      createContact(input:{
-        contactedBy:1
-        contactType:2
-        contactMessage:"New Contacts Hello Boss"
-        contactedWith:2
-      }){
-        success
-      } 
-    }
+	mutation{
+	  createContact(input:{
+	    name:"new contact"
+	    email: "email@gmail.com"
+	    contactType:1
+	    rentalBooking:"shop1"
+	  })
+	  {
+	    success
+	    contact{
+	      id
+	      name
+	      email
+	    }
+	  }
+	}
 
 
 ## Update Contact
 
-    mutation{
-      updateContact(id:4,input:{
-        contactedBy:2
-        contactType:1
-        contactMessage:"Update Contact Hello Sir"
-        contactedWith:1
-      }){
-        success
-      } 
-    }
-
+	mutation{
+	  updateContact(id:1,input:{
+	    name:"Majedul Islam"
+	    email:"ex@gmail.com"
+	    rentalBooking:"shop101"
+	    contactType:1
+	  }){
+	    success
+	    contact{
+	      id
+	      name
+	      email
+	      rentalBooking
+	      contactType{
+		name
+	      }
+	    }
+	  }
+	}
+	
 
 ## Delete Contact
 
-    mutation{
-      deleteContact(id:4){
-        success
-      }
-    }
+    
+	mutation{
+	  deleteContact(id:1)
+	  {
+	    success
+	  }
+	}
 
 
 # ``# Shop Module``
