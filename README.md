@@ -30,6 +30,9 @@
 	http://localhost:8000/auth/user/
 
 
+
+# `graphql API`
+
 url:  
 
     http://localhost:8000/graphql
@@ -37,9 +40,6 @@ url:
 
 
 # ``#Core Module``
-
-
-
 
 ## Get About Us 
 
