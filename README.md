@@ -1,43 +1,31 @@
+
+# ``#Users Module``
+
+#### `Authentication:`
+
+## Registration
+
+
+	http://localhost:8000/auth/registration/
+
+## Login 
+
+	http://localhost:8000/auth/login/
+
+
+## Password Reset
+
+	http://localhost:8000/auth/password/reset/
+	
+## Password reset confirm 
+
+	http://localhost:8000/auth/password/reset/confirm/
+
 url:  
 
     http://localhost:8000/graphql
 
-# ``#Users Module``
-## Create New User
 
-	mutation{
-          createUser(input:{username: "jwt_user_2", email: "jwt_user_2@gmail.com", password: "adminadmin", name: "jwt_user"}){
-            user{
-              id
-	      username
-	      name
-            }
-	    token
-	    refreshToken
-          }
-        }
-	
-## Update Existing User
-	mutation{
-          updateUser(input:{password: "adminadmin", name: "jwt_user"}){
-            user{
-              id
-	      username
-	      name
-            }
-	    token
-	    refreshToken
-          }
-        }
-	
-## Login
-	mutation{
-          tokenAuth(username: "jwt_user_2", password: "adminadmin"){
-	    token
-	    payload
-	    refreshExpiresIn
-          }
-        }
 
 # ``#Core Module``
 
