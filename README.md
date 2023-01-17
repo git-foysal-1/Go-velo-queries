@@ -13,6 +13,10 @@
 	http://localhost:8000/auth/login/
 
 
+## Change Password : 
+
+	http://localhost:8000/auth/password/change/
+
 ## Password Reset
 
 	http://localhost:8000/auth/password/reset/
@@ -20,6 +24,11 @@
 ## Password reset confirm 
 
 	http://localhost:8000/auth/password/reset/confirm/
+
+## User Details
+
+	http://localhost:8000/auth/user/
+
 
 url:  
 
