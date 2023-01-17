@@ -726,4 +726,57 @@ url:
     }
 
 
+# `#Core Module`
+
+
+
+## Add to cart 
+
+	mutation{
+	  addToCart(productId:1 quantity:100){
+	    cart{
+	      id
+	      user{
+		id
+		username
+	      }
+	    }
+	    cartItem{
+	      id
+	      product{
+		id
+		name
+	      }
+	      quantity
+	    }
+	  }
+	}
+
+
+
+## Remove cart Item 
+
+	mutation{
+	  removeFromCart(productId:1 quantity:10){
+	    cart{
+	      id
+	      user{
+		id
+		username
+	      }
+	    }
+	    cartItem{
+	      id
+	      product{
+		id
+		name
+	      }
+	      quantity
+	    }
+	  }
+	}
+
+
+
+
 
