@@ -743,7 +743,7 @@ url:
     }
 
 
-# `#Core Module`
+# `#Cart Module`
 
 
 
