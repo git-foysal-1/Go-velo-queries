@@ -601,18 +601,31 @@ url:
 
 ## Create New Shop 
 
-    mutation{
-      createShop(input:{
-        name:"My Shop"
-      })
-      {
-        shop{
-          id
-          name
-        }
-        success
-      }
-    }
+ 
+	  mutation{
+	  createShop(input:{
+	    name:"New Shop"
+	    street: "Dhaka"
+	    city: "Dhaka City"
+	    state: "Dhaka Uttara"
+	    zipCode :"1230"
+	    areaCode: "1230"
+	    country: "Canada"
+	    phone: "+85452825"
+	    website: "www.web.com"
+	    email: "shopmail@gmail.com"
+	    description: "shop description"
+	    shopImage: "imageurl"
+
+	  })
+	  {
+	    shop{
+	     id
+	     name
+	    }
+	    success
+	  }
+	}
 
 
 ## Update Shop 
