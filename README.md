@@ -30,6 +30,10 @@
 	http://localhost:8000/auth/user/
 
 
+## Logout 
+
+	http://localhost:8000/auth/logout/
+
 
 # `graphql API`
 
