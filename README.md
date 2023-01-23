@@ -51,7 +51,7 @@ url:
       aboutUs{
         id
         title
-        description
+        content
         image
         createdAt
         updatedAt
@@ -65,7 +65,7 @@ url:
       privacyPolicy{
         id
         title
-        description
+        content
         createdAt
         updatedAt
         
@@ -79,7 +79,7 @@ url:
       termsAndConditions{
         id
         title
-        description
+        content
         createdAt
         updatedAt
       }
