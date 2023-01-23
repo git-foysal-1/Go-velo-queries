@@ -590,6 +590,7 @@ url:
         email
         description
         shopImage
+	
         owner{
           id
           name
@@ -602,9 +603,11 @@ url:
 ## Create New Shop 
 
  
-	  mutation{
+	
+        mutation{
 	  createShop(input:{
 	    name:"New Shop"
+      	    legalEntity:"Shop Legal Entity"
 	    street: "Dhaka"
 	    city: "Dhaka City"
 	    state: "Dhaka Uttara"
@@ -615,17 +618,24 @@ url:
 	    website: "www.web.com"
 	    email: "shopmail@gmail.com"
 	    description: "shop description"
-	    shopImage: "imageurl"
+	    shopImage:uploadImage
+	    openingTime: time
+	    closingTime: time  
 
 	  })
 	  {
 	    shop{
 	     id
 	     name
+        owner{
+          id
+          username
+        }
 	    }
 	    success
 	  }
 	}
+
 
 
 ## Update Shop 
