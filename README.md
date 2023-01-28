@@ -668,7 +668,8 @@ url:
     query{
       products{
         id
-        name
+        brand
+        model
         productType{
           id
           name
@@ -679,7 +680,11 @@ url:
           email
           website
         }
+        stock
+        isAvailable
         description
+        rating
+        totalReviews
         createdAt
       }
     }
