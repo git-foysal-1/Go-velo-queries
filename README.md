@@ -777,12 +777,7 @@ url:
 	}
 
 
-
-
-
-
 ## Product review by product id 
-
 
 	query{
 	  getProductReviewsByProductId(id:1){
@@ -806,6 +801,71 @@ url:
 	    }
 	  }
 	}
+
+
+## Create product review 
+
+
+	mutation{
+	  createProductReview(input:{
+	    product:1
+	    review:"good product"
+	    rating:5
+	  })
+	  {
+	    success
+	    productReview{
+	      id
+	      product{
+		id
+		model
+		brand
+		createdAt
+		rating
+	      }
+
+	    }
+	    productReview{
+	      id
+	      rating
+	      review
+
+	    }
+	  }
+	}
+
+## Update product review 
+
+	mutation{
+	  updateProductReview(id:13,input:{
+	    review:"valo products"
+	    rating:5
+	  }){
+	    success
+	    productReview{
+	      id
+	      review
+	      rating
+	      product{
+		id
+		model
+	      }
+
+	    }
+	  }
+	}
+
+## Delete product review 
+
+	mutation{
+	  deleteProductReview(id:1){
+	    success
+	  }
+	}
+
+
+
+
 
 # `#Cart Module`
 
