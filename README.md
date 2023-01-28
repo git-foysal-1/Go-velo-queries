@@ -751,7 +751,61 @@ url:
         }
       }
     }
+    
+    
 
+## Get all product review
+
+
+	query{
+	  productReviews{
+	    id
+	    product{
+	      id
+	      brand
+	      model
+	    }
+	    review
+	    rating
+	    user{
+	      id
+	      username
+	      userImage
+	    }
+
+	  }
+	}
+
+
+
+
+
+
+## Product review by product id 
+
+
+	query{
+	  getProductReviewsByProductId(id:1){
+	    id
+	    review
+	    rating
+	    user{
+	      id
+	      username
+	      userImage
+	    }
+	    product{
+	      id
+	      brand
+	      model
+	      productimageSet{
+		id
+		image
+		isDefault
+	      }  
+	    }
+	  }
+	}
 
 # `#Cart Module`
 
