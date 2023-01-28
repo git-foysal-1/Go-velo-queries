@@ -760,7 +760,7 @@ url:
 ## Add to cart 
 
 	mutation{
-	  addToCart(productId:1 quantity:100){
+	  addToCart(productId:2 quantity:5){
 	    cart{
 	      id
 	      user{
@@ -772,12 +772,13 @@ url:
 	      id
 	      product{
 		id
-		name
+		brand
 	      }
 	      quantity
 	    }
 	  }
 	}
+
 
 
 
@@ -796,7 +797,7 @@ url:
 	      id
 	      product{
 		id
-		name
+		brand
 	      }
 	      quantity
 	    }
@@ -804,6 +805,27 @@ url:
 	}
 
 
+## Get cart items
+
+	query{
+	  cartItems{
+	    id
+	    cart{
+	      id
+	      user{
+		id
+		name
+	      }
+	    }
+	    product{
+	      id
+	      brand
+	      model
+	    }
+	    quantity
+	    createdAt
+	  }
+	}
 
 
 
