@@ -933,8 +933,9 @@ url:
 ## Add to cart 
 
 
+
 	mutation {
-	  addToCart(userId: 2, productId: 1, quantity: 10, productRateId:1){
+	  addToCart(userId: 2, productId: 1, quantity: 10){
 	    cart {
 	      id
 	      user {
@@ -957,6 +958,7 @@ url:
 	    }
 	  }
 	}
+
 
 
 
