@@ -693,6 +693,7 @@ url:
 	      productimageSet{
 		id 
 		image
+		isDefault
 	      }
 	      productstockSet{
 		id
