@@ -941,6 +941,103 @@ url:
 
 
 
+# `#Product Demurrage`
+
+## Get all Product demurrages:
+
+	query{
+	  productDemurrages{
+	    id
+	    product{
+	      id
+	      model
+	    }
+	    description
+	    image
+	    createdAt
+
+	  }
+	}
+
+
+## Get Product demurrages by product id :
+
+
+	query{
+	  getProductDemurragesByProductId(id:1){
+	    id
+	    description
+		image
+	    product{
+	      id
+	      model
+	      shop{
+		id
+		name
+	      }
+	    }
+
+	  }
+	}
+
+
+
+## Create product damage:
+
+	mutation{
+	  createProductDamage(input:{
+	    product:1
+	    description:"damage product"
+	    user:2
+
+	  }){
+	    productDamage{
+	      id
+	      description
+	      product{
+		id
+		brand
+	      }
+	    }
+
+	    success
+
+	  }
+	}
+
+
+## Update product damage:
+
+
+	mutation{
+	  updateProductDamage(id:2,input:{
+		product:1
+	    description:"Update damage example"
+	    user:2
+	  }){
+	    productDamage{
+	      id
+	      description
+	      product{
+		id
+		brand
+	      }
+	    }
+	    success
+	  }
+	}
+	
+	
+## Delete product damage:
+
+	mutation{
+	  deleteProductDamage(id:1){
+	    success
+	  }
+	}
+
+
+
 
 # `#Cart Module`
 
