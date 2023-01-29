@@ -964,25 +964,31 @@ url:
 
 ## Remove cart Item 
 
-	mutation{
-	  removeFromCart(productId:1 quantity:10){
-	    cart{
+	mutation {
+	  removeFromCart(userId: 2, productId: 1, quantity: 1) {
+	    cart {
 	      id
-	      user{
+	      user {
 		id
 		username
 	      }
-	    }
-	    cartItem{
-	      id
-	      product{
-		id
-		brand
+	      cartitemSet {
+		edges {
+		  node {
+		    id
+		    price
+		    quantity
+		    product {
+		      id
+		      brand
+		    }
+		  }
+		}
 	      }
-	      quantity
 	    }
 	  }
 	}
+
 
 
 ## Get all cart items
