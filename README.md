@@ -932,27 +932,31 @@ url:
 
 ## Add to cart 
 
-	mutation{
-	  addToCart(userId:1, productId:2, quantity:5){
-	    cart{
+
+	mutation {
+	  addToCart(userId: 2, productId: 1, quantity: 10, productRateId:1){
+	    cart {
 	      id
-	      user{
+	      user {
 		id
 		username
 	      }
-	      cartitemSet{
-		id
-		product{
-		  id
-		  model
+	      cartitemSet {
+		edges {
+		  node {
+		    id
+		    price
+		    quantity
+		    product {
+		      id
+		      brand
+		    }
+		  }
 		}
-		quantity
 	      }
 	    }
 	  }
 	}
-
-
 
 
 
