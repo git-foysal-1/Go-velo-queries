@@ -665,29 +665,69 @@ url:
 # ``# Product Module ``
 ## Get All Product 
 
-    query{
-      products{
-        id
-        brand
-        model
-        productType{
-          id
-          name
-        }
-        shop{
-          id
-          name
-          email
-          website
-        }
-        stock
-        isAvailable
-        description
-        rating
-        totalReviews
-        createdAt
-      }
-    }
+	query{
+	  products{
+	    edges{
+	     node{
+	      id
+	      model
+	      brand
+	      shop{
+		id
+		name
+	      }
+	      productType{
+		id
+		name
+	      }
+	      rating
+	      totalReviews
+	      stock
+	      description
+	      isAvailable
+	      createdAt
+	      productrateSet{
+		id
+		rate
+	      }
+	      productimageSet{
+		id 
+		image
+	      }
+	      productstockSet{
+		id
+		stock
+	      }
+	      productsizeSet{
+		id
+		size
+	      }
+	      productoptionSet{
+		id
+		option
+	      }
+	      productconditionSet{
+		id
+		condition
+	      }
+	      productreviewSet{
+		id
+		review
+		rating
+		user{
+		  id
+		  username
+		  userImage
+
+		}
+
+	      }
+
+	      }
+
+	    }
+	  }
+	}
 
 
 
