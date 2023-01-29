@@ -979,27 +979,56 @@ url:
 	}
 
 
-## Get cart items
+## Get all cart items
+
 
 	query{
 	  cartItems{
-	    id
-	    cart{
-	      id
-	      user{
+	    edges{
+	      node
+	      {
 		id
-		name
+		cart{
+		  id
+		  user{
+		    id
+		    username
+		  }
+
+		}
+		price
+		product{
+		  id
+		  brand
+		}
+		quantity
 	      }
 	    }
-	    product{
-	      id
-	      brand
-	      model
-	    }
-	    quantity
-	    createdAt
 	  }
 	}
+
+
+## get cart items by cart id 
+
+	query{
+	  cartItems(cartId:2){
+	    edges{
+	      node
+	      {
+		id
+		price
+		product{
+		  id
+		  brand
+		}
+		quantity
+	      }
+	    }
+	  }
+	}
+
+
+
 
 
 
