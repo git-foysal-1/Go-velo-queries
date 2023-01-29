@@ -933,24 +933,25 @@ url:
 ## Add to cart 
 
 	mutation{
-	  addToCart(productId:2 quantity:5){
+	  addToCart(userId:1, productId:2, quantity:5){
 	    cart{
 	      id
 	      user{
 		id
 		username
 	      }
-	    }
-	    cartItem{
-	      id
-	      product{
+	      cartitemSet{
 		id
-		brand
+		product{
+		  id
+		  model
+		}
+		quantity
 	      }
-	      quantity
 	    }
 	  }
 	}
+
 
 
 
