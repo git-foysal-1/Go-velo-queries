@@ -35,6 +35,19 @@
 	http://localhost:8000/auth/logout/
 
 
+
+## Verify Token  
+
+	mutation{
+	  verifyToken(token: "Your_Token")
+	  {
+	    payload
+
+	  }
+	}
+
+
+
 # `graphql API`
 
 url:  
