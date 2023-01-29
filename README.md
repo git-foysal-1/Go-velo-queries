@@ -867,6 +867,7 @@ url:
 
 	mutation{
 	  createProductReview(input:{
+	    user:1
 	    product:1
 	    review:"good product"
 	    rating:5
@@ -893,23 +894,38 @@ url:
 	  }
 	}
 
+
+
 ## Update product review 
 
 	mutation{
-	  updateProductReview(id:13,input:{
-	    review:"valo products"
+	  updateProductReview(id:37,input:{
+	    user:1
+	    product:1
+	    review:"good"
 	    rating:5
-	  }){
+	  })
+	  {
 	    success
 	    productReview{
 	      id
-	      review
-	      rating
 	      product{
-		id
-		model
+		  id
+		  model
+		  brand
+		  createdAt
+		  rating
 	      }
 
+	    }
+	    productReview{
+		  id
+		  rating
+		  review
+		  user{
+		    id
+		    username
+		  }
 	    }
 	  }
 	}
