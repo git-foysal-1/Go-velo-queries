@@ -674,6 +674,64 @@ url:
       }
     }
     
+    
+## Get shop by owner/user id
+
+	query{
+	  getShopByOwnerId(userId:2){
+	    id
+	    name
+	    legalEntity
+	    state
+	    street
+	    city
+	    country
+	    zipCode
+	    areaCode
+	    phone
+	    website
+	    email
+	    description
+	    shopImage
+	    openeningTime
+	    closingTime
+	    updatedAt
+	    createdAt
+
+	    productSet{
+	      edges
+	      {
+		node{
+		  id
+		  model
+		  brand
+		  isAvailable
+		  productimageSet{
+		    id
+		    image
+		    isDefault
+		  }
+
+		  productsizeSet{
+		    id
+		    size
+		  }
+
+		  productrateSet{
+		    id
+		    rate
+		    rateType{
+		      id
+		      name
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	}
+
+
 
 # ``# Product Module ``
 ## Get All Product 
