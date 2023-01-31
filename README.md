@@ -920,6 +920,27 @@ url:
 	}
 
 
+
+## Get product review by shop id 
+
+	query{
+	  getProductReviewsByShopId(id: 1) {
+	    review
+	    rating
+	    product {
+	      id
+	      brand
+	      model
+	      productimageSet {
+		id
+		image
+		isDefault
+	      }
+	      }
+	    }
+	  }
+
+
 ## Create product review 
 
 
