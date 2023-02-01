@@ -605,6 +605,7 @@ url:
 		email
 		description
 		shopImage
+		shopCover
 		owner {
 		  id
 		  name
