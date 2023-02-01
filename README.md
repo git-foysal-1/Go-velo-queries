@@ -1253,25 +1253,31 @@ url:
 	}
 
 
-## get cart items by cart id 
+## get cart items by user id 
 
 	query{
-	  cartItems(cartId:2){
+	  carts(userId:"1"){
 	    edges{
-	      node
-	      {
+	      node{
 		id
-		price
-		product{
-		  id
-		  brand
+		cartitemSet{
+		  edges{
+		    node{
+		      id
+		      quantity
+		      price
+		      product{
+			id
+			model
+			brand
+		      }
+		    }
+		  }
 		}
-		quantity
 	      }
 	    }
 	  }
 	}
-
 
 
 
