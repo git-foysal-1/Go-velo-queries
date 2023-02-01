@@ -1166,7 +1166,6 @@ url:
 ## Add to cart 
 
 
-
 	mutation {
 	  addToCart(userId: 2, productId: 1, quantity: 10){
 	    cart {
@@ -1253,7 +1252,7 @@ url:
 	}
 
 
-## get cart items by user id 
+## get cart by user id 
 
 	query{
 	  carts(userId:"1"){
