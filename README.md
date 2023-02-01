@@ -1270,6 +1270,7 @@ url:
 			id
 			model
 			brand
+			stock
 		      }
 		    }
 		  }
