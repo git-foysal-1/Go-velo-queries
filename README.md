@@ -664,19 +664,11 @@ url:
 	    description: "shop description"
 	    shopImage:Upload
 	    shopCover:Upload
-	    openingTime
-       	    closingTime
+	    openingTime:Time
+       	    closingTime:Time
 
 	  })
 	  {
-	    shop{
-	     id
-	     name
-        owner{
-          id
-          username
-        }
-	    }
 	    success
 	  }
 	}
@@ -687,7 +679,22 @@ url:
 
     mutation{
       updateShop(id:11,input:{
-        name:"Shop1"
+            name:"New Shop"
+      	    legalEntity:"Shop Legal Entity"
+	    street: "Dhaka"
+	    city: "Dhaka City"
+	    state: "Dhaka Uttara"
+	    zipCode :"1230"
+	    areaCode: "1230"
+	    country: "Canada"
+	    phone: "+85452825"
+	    website: "www.web.com"
+	    email: "shopmail@gmail.com"
+	    description: "shop description"
+	    shopImage:Upload
+	    shopCover:Upload
+	    openingTime:Time
+       	    closingTime:Time
       })
       {
         shop{
