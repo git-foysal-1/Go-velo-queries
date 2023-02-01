@@ -606,12 +606,15 @@ url:
 		description
 		shopImage
 		shopCover
+		openingTime
+		closingTime
+		createdAt
 		owner {
 		  id
 		  name
 		  email
 		}
-		createdAt
+
 		productSet {
 		  edges {
 		    node {
@@ -659,9 +662,10 @@ url:
 	    website: "www.web.com"
 	    email: "shopmail@gmail.com"
 	    description: "shop description"
-	    shopImage:uploadImage
-	    openingTime: time
-	    closingTime: time  
+	    shopImage:Upload
+	    shopCover:Upload
+	    openingTime
+       	    closingTime
 
 	  })
 	  {
@@ -689,6 +693,7 @@ url:
         shop{
           id
           name
+	  ....
         }
         success
       }
@@ -721,7 +726,10 @@ url:
 		website
 		email
 		description
-		shopImage
+		shopCover
+		openingTime
+		closingTime
+		createdAt
 		owner {
 		  id
 		  name
