@@ -589,29 +589,56 @@ url:
 ## Get All Shops 
 
     query{
-      shops{
-        id
-        name
-        street
-        city
-        state
-        zipCode
-        areaCode
-        country
-        phone
-        website
-        email
-        description
-        shopImage
-	
-        owner{
-          id
-          name
-          email
-        }
-        createdAt     
-      }
-    }
+	  shops{
+	    edges {
+	      node {
+		id
+		name
+		street
+		city
+		state
+		zipCode
+		areaCode
+		country
+		phone
+		website
+		email
+		description
+		shopImage
+		owner {
+		  id
+		  name
+		  email
+		}
+		createdAt
+		productSet {
+		  edges {
+		    node {
+		      id
+		      model
+		      brand
+		      shop {
+			id
+			name
+		      }
+		      productType {
+			id
+			name
+		      }
+		      rating
+		      totalReviews
+		      stock
+		      description
+		      isAvailable
+		      createdAt
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	}
+
 
 ## Create New Shop 
 
@@ -678,51 +705,48 @@ url:
 ## Get shop by owner/user id
 
 	query{
-	  getShopByOwnerId(userId:2){
-	    id
-	    name
-	    legalEntity
-	    state
-	    street
-	    city
-	    country
-	    zipCode
-	    areaCode
-	    phone
-	    website
-	    email
-	    description
-	    shopImage
-	    openeningTime
-	    closingTime
-	    updatedAt
-	    createdAt
-
-	    productSet{
-	      edges
-	      {
-		node{
+	  shops(ownerId:"3"){
+	    edges {
+	      node {
+		id
+		name
+		street
+		city
+		state
+		zipCode
+		areaCode
+		country
+		phone
+		website
+		email
+		description
+		shopImage
+		owner {
 		  id
-		  model
-		  brand
-		  isAvailable
-		  productimageSet{
-		    id
-		    image
-		    isDefault
-		  }
-
-		  productsizeSet{
-		    id
-		    size
-		  }
-
-		  productrateSet{
-		    id
-		    rate
-		    rateType{
+		  name
+		  email
+		}
+		createdAt
+		productSet {
+		  edges {
+		    node {
 		      id
-		      name
+		      model
+		      brand
+		      shop {
+			id
+			name
+		      }
+		      productType {
+			id
+			name
+		      }
+		      rating
+		      totalReviews
+		      stock
+		      description
+		      isAvailable
+		      createdAt
 		    }
 		  }
 		}
@@ -730,6 +754,7 @@ url:
 	    }
 	  }
 	}
+
 
 
 
