@@ -750,7 +750,7 @@ url:
 		    node {
 		      id
 		      model
-		      brand
+		      brand 
 		      shop {
 			id
 			name
@@ -758,6 +758,23 @@ url:
 		      productType {
 			id
 			name
+		      }
+		      productimageSet{
+			id
+			image
+			isDefault
+		      }
+		      productsizeSet{
+			id
+			size
+		      }
+		      productrateSet{
+			id
+			rate
+			rateType{
+			  id
+			  name
+			}
 		      }
 		      rating
 		      totalReviews
@@ -772,6 +789,36 @@ url:
 	    }
 	  }
 	}
+
+
+# mutation{
+#   updateShop(id:1,input:{
+#         name:"New Shop"
+#   	    legalEntity:"Shop Legal Entity"
+#     street: "Dhaka"
+#     city: "Dhaka City"
+#     state: "Dhaka Uttara"
+#     zipCode :"1230"
+#     areaCode: "1230"
+#     country: "Canada"
+#     phone: "+85452825"
+#     website: "www.web.com"
+#     email: "shopmail@gmail.com"
+#     description: "shop description"
+  
+   
+#   })
+#   {
+#     shop{
+#       id
+#       name
+      
+ 
+#     }
+#     success
+#   }
+# }
+
 
 
 
