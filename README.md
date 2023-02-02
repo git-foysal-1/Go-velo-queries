@@ -718,7 +718,7 @@ url:
 ## Get shop by owner/user id
 
 	query{
-	  shops(ownerId:"3"){
+	  shops(ownerId: "1") {
 	    edges {
 	      node {
 		id
@@ -736,6 +736,8 @@ url:
 		shopCover
 		openingTime
 		closingTime
+		rating
+		totalReviews
 		createdAt
 		owner {
 		  id
@@ -770,6 +772,7 @@ url:
 	    }
 	  }
 	}
+
 
 
 
