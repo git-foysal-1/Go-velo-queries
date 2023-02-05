@@ -992,8 +992,9 @@ url:
 
 ## Product search and filter query: 
 
+	
 	query{
-	  products(brand: "", model: "",  shopLocation: "Uttara") {
+	  products(brand: "", model: "",  shopLocation: "" productTypeId: "", productRateTypeId:"2") {
 	    edges {
 	      node {
 		id
@@ -1037,6 +1038,7 @@ url:
 	    }
 	  }
 	}
+
 
 
 
