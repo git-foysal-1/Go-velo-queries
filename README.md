@@ -58,6 +58,22 @@ url:
 
 # ``#Core Module``
 
+
+
+## Home page logo and video :
+
+	query{
+	  homePageContent{
+	    id
+	    siteLogo
+	    siteVideo
+	  }
+
+	  }
+
+
+
+
 ## Get About Us 
 
     query{
