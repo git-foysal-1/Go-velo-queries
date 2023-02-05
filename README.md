@@ -990,6 +990,59 @@ url:
 
 
 
+## Product search and filter query: 
+
+	query{
+	  products(brand: "", model: "",  shopLocation: "Uttara") {
+	    edges {
+	      node {
+		id
+		model
+		brand
+		shop {
+		  id
+		  name
+		  state
+		  street
+
+		}
+		productType {
+		  id
+		  name
+		}
+		productimageSet {
+		  id
+		  image
+		  isDefault
+		}
+		productsizeSet {
+		  id
+		  size
+		}
+		productrateSet {
+		  id
+		  rate
+		  rateType {
+		    id
+		    name
+		  }
+		}
+		rating
+		totalReviews
+		stock
+		description
+		isAvailable
+		createdAt
+	      }
+	    }
+	  }
+	}
+
+
+
+
+
+
 ## Get All Product Image 
 
     query{
