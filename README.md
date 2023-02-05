@@ -1430,5 +1430,125 @@ url:
 
 
 
+## Order module:
+
+
+#### Recent bike hires
+
+	query{
+	  latestOrder{
+	    id
+	    quantity
+	    price
+	    product{
+	       id
+		model
+		brand
+		shop {
+		  id
+		  name
+		  state
+		  street
+
+		}
+		productType {
+		  id
+		  name
+		}
+		productimageSet {
+		  id
+		  image
+		  isDefault
+		}
+		productsizeSet {
+		  id
+		  size
+		}
+		productrateSet {
+		  id
+		  rate
+		  rateType {
+		    id
+		    name
+		  }
+		}
+		rating
+		totalReviews
+		stock
+		description
+		isAvailable
+		createdAt
+	    }
+	  }
+	}
+
+
+
+### Order by user id 
+
+	query{
+	  orderByUserId(userId:4){
+	    id
+	    user{
+	      id
+	      username
+
+	    }
+	    paymentMethod
+	    isPaid
+	    isDelivered
+	    totalPrice
+	    paidAt
+	    deliveredAt
+	    returnedAt
+
+
+	    orderitemSet{
+	      product{
+	       id
+		model
+		brand
+		shop {
+		  id
+		  name
+		  state
+		  street
+
+		}
+		productType {
+		  id
+		  name
+		}
+		productimageSet {
+		  id
+		  image
+		  isDefault
+		}
+		productsizeSet {
+		  id
+		  size
+		}
+		productrateSet {
+		  id
+		  rate
+		  rateType {
+		    id
+		    name
+		  }
+		}
+		rating
+		totalReviews
+		stock
+		description
+		isAvailable
+		createdAt
+
+	    }
+
+	    }
+	  }
+	}
+
+
 
 
