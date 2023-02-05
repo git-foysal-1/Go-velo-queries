@@ -946,6 +946,50 @@ url:
 
 
 
+## Get Products By Price Range
+
+	query{
+	  getProductsByPriceRange(min: 50, max: 100) {
+	    id
+	    model
+	    brand
+	    shop {
+	      id
+	      name
+	    }
+	    productType {
+	      id
+	      name
+	    }
+	    productimageSet {
+	      id
+	      image
+	      isDefault
+	    }
+	    productsizeSet {
+	      id
+	      size
+	    }
+	    productrateSet {
+	      id
+	      rate
+	      rateType {
+		id
+		name
+	      }
+	    }
+	    rating
+	    totalReviews
+	    stock
+	    description
+	    isAvailable
+	    createdAt
+	  }
+	}
+
+
+
+
 ## Get All Product Image 
 
     query{
