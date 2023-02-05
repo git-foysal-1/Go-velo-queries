@@ -72,6 +72,17 @@ url:
 	  }
 
 
+## How Go Velo Works > Content 
+
+	query{
+	  workFlow{
+	    id
+	    title
+	    description
+	    icon
+	  }
+	}
+
 
 
 ## Get About Us 
