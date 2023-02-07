@@ -880,66 +880,59 @@ url:
 ## Get All Product 
 
 	query{
-	  products{
-	    edges{
-	     node{
-	      id
-	      model
-	      brand
-	      shop{
+	  products {
+	    edges {
+	      node {
 		id
-		name
-	      }
-	      productType{
-		id
-		name
-	      }
-	      rating
-	      totalReviews
-	      stock
-	      description
-	      isAvailable
-	      createdAt
-	      productrateSet{
-		id
-		rate
-	      }
-	      productimageSet{
-		id 
-		image
-		isDefault
-	      }
-	      productstockSet{
-		id
-		stock
-	      }
-	      productsizeSet{
-		id
-		size
-	      }
-	      productoptionSet{
-		id
-		option
-	      }
-	      productconditionSet{
-		id
-		condition
-	      }
-	      productreviewSet{
-		id
-		review
-		rating
-		user{
+		model
+		brand
+		shop {
 		  id
-		  username
-		  userImage
-
+		  name
+		}
+		productType {
+		  id
+		  name
+		}
+		rating
+		totalReviews
+		stock
+		description
+		isAvailable
+		stock
+		size{
+		  id
+		  productSize
+		}
+		condition
+		createdAt
+		productrateSet {
+		  id
+		  rate
+		}
+		productimageSet {
+		  id
+		  image
+		  isDefault
 		}
 
-	      }
 
-	      }
+		productoptionSet {
+		  id
+		  option
+		}
 
+		productreviewSet {
+		  id
+		  review
+		  rating
+		  user {
+		    id
+		    username
+		    userImage
+		  }
+		}
+	      }
 	    }
 	  }
 	}
