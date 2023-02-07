@@ -818,33 +818,58 @@ url:
 	}
 
 
-# mutation{
-#   updateShop(id:1,input:{
-#         name:"New Shop"
-#   	    legalEntity:"Shop Legal Entity"
-#     street: "Dhaka"
-#     city: "Dhaka City"
-#     state: "Dhaka Uttara"
-#     zipCode :"1230"
-#     areaCode: "1230"
-#     country: "Canada"
-#     phone: "+85452825"
-#     website: "www.web.com"
-#     email: "shopmail@gmail.com"
-#     description: "shop description"
-  
-   
-#   })
-#   {
-#     shop{
-#       id
-#       name
-      
- 
-#     }
-#     success
-#   }
-# }
+## create Shop Verification 
+
+	mutation{
+	  createShopVerification(input:{
+	    shopId:2
+	    ownerImage: Upload
+	    idFrontImage: Upload
+	    idBackImage: Upload
+
+	  }){
+	    success
+	    shopVerification{
+	      id
+	      shop{
+		id
+		isVerified
+	      }
+	      status
+	      ownerImage
+	      idFrontImage
+	      idBackImage
+	    }
+	  } 
+	}
+
+
+## Update Shop Verification
+
+	mutation{
+	  updateShopVerification(input:{
+	    id:3
+	    ownerImage: Upload
+	    idFrontImage: Upload
+	    idBackImage: Upload
+	  })
+	  {
+	    success
+
+	    shopVerification{
+	    id
+	    shop{
+	      id
+	      name
+	    }
+	    status
+	    idFrontImage
+	    status
+	    idBackImage
+
+	  }
+	  }
+	}
 
 
 
