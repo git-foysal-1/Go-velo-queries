@@ -939,31 +939,56 @@ url:
 
 
 
-## Create New Product
+## Create Product Mutation
 
-    mutation{
-      createProduct(input:{
-        name:"Royal enfield"
-        productType:2
-        shop:2
-        description:"Explore latest motorcycles in India from Royal Enfield including Meteor 350."
-      }){
-        product{
-          id
-          name
-          productType{
-            id
-            name  
-          }
-          shop{
-            id 
-            name
-          }
-          description
-        }
-        success
-      }
-    }
+	mutation{
+	  createProduct(input:{
+	    brand:"product brand100"
+	    model:"pdoruct model20"
+	    productType:1
+	    shop:2
+	    description:"shop details"
+	    stock:500
+	    size:1
+	    condition:"product conditation"
+	    image: Upload
+	    rate:[{rateType:1, rate:100,},{rateType:1, rate:100,}]
+
+	  })
+	  {
+	    success
+	    product{
+	      id
+	      brand
+	      model
+	      size{
+		id
+		productSize
+	      }
+	      productType{
+		id
+		name
+	      }
+	      shop{
+		id
+	      }
+	      description
+	      stock
+	      productrateSet{
+		id
+		product{
+		  id
+		}
+		rateType{
+		  id
+		}
+		rate
+	      }
+	      condition
+	    }
+	  }
+	}
+
 
 
 
