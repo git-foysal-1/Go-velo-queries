@@ -786,11 +786,7 @@ url:
 			id
 			name
 		      }
-		      productimageSet{
-			id
-			image
-			isDefault
-		      }
+		      image
 		      productsizeSet{
 			id
 			size
@@ -910,13 +906,7 @@ url:
 		  id
 		  rate
 		}
-		productimageSet {
-		  id
-		  image
-		  isDefault
-		}
-
-
+		 image
 		productoptionSet {
 		  id
 		  option
@@ -994,17 +984,55 @@ url:
 
 ## Update product 
 
-    mutation{
-      updateProduct(id:2,input:{
-        name:"Mobile"
-      }) {
-        product{
-          id
-          name
-        }
-        success
-      }
-    }
+	 mutation{
+	  updateProduct(id:24,input:{
+	    brand:"productupdated"
+	    model:"pdoruct model20"
+	    productType:1
+	    description:"shop details"
+	    stock:500
+	    size:2
+	    condition:"product conditation"
+	    rate:[{rateType:2, rate:40,},{rateType:4, rate:800,}]
+	    image:Upload
+	  })
+	  {
+	    success
+	    product{
+	      id
+	      brand
+	      model
+	      description
+	      stock
+	      condition
+	      size{
+		id
+		productSize
+	      }
+	      productType{
+		id
+		name
+	      }
+	      shop{
+		id
+	      }
+
+	      productrateSet{
+		id
+		product{
+		  id
+		}
+		rateType{
+		  id
+		}
+		rate
+	      }
+	      image
+
+	    }
+	  }
+	}
+  
 
 
 ## Delete Product 
@@ -1031,11 +1059,8 @@ url:
 	      id
 	      name
 	    }
-	    productimageSet {
-	      id
-	      image
-	      isDefault
-	    }
+	 
+	    image
 	    productsizeSet {
 	      id
 	      size
@@ -1081,11 +1106,7 @@ url:
 		  id
 		  name
 		}
-		productimageSet {
-		  id
-		  image
-		  isDefault
-		}
+		
 		productsizeSet {
 		  id
 		  size
@@ -1098,6 +1119,7 @@ url:
 		    name
 		  }
 		}
+		image
 		rating
 		totalReviews
 		stock
@@ -1114,21 +1136,6 @@ url:
 
 
 
-
-## Get All Product Image 
-
-    query{
-      productsImages{
-        id
-        image
-        isDefault
-        product{
-          id
-          name
-        }
-      }
-    }
-    
     
 
 ## Get all product review
@@ -1141,6 +1148,7 @@ url:
 	      id
 	      brand
 	      model
+	      image
 	    }
 	    review
 	    rating
@@ -1170,11 +1178,8 @@ url:
 	      id
 	      brand
 	      model
-	      productimageSet{
-		id
-		image
-		isDefault
-	      }  
+	      image
+	     
 	    }
 	  }
 	}
@@ -1191,11 +1196,7 @@ url:
 	      id
 	      brand
 	      model
-	      productimageSet {
-		id
-		image
-		isDefault
-	      }
+	      image
 	      }
 	    }
 	  }
@@ -1306,7 +1307,7 @@ url:
 	  getProductDemurragesByProductId(id:1){
 	    id
 	    description
-		image
+	     image
 	    product{
 	      id
 	      model
@@ -1525,11 +1526,7 @@ url:
 		  id
 		  name
 		}
-		productimageSet {
-		  id
-		  image
-		  isDefault
-		}
+		image
 		productsizeSet {
 		  id
 		  size
@@ -1589,11 +1586,7 @@ url:
 		  id
 		  name
 		}
-		productimageSet {
-		  id
-		  image
-		  isDefault
-		}
+		image
 		productsizeSet {
 		  id
 		  size
