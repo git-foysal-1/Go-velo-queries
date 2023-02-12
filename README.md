@@ -1553,6 +1553,7 @@ url:
 
 ### Order by user id 
 
+	
 	query{
 	  orderByUserId(userId:4){
 	    id
@@ -1562,6 +1563,7 @@ url:
 
 	    }
 	    paymentMethod
+	    status
 	    isPaid
 	    isDelivered
 	    totalPrice
@@ -1587,10 +1589,9 @@ url:
 		  name
 		}
 		image
-		productsizeSet {
-		  id
-		  size
-		}
+		size{
+	    productSize
+	  }
 		productrateSet {
 		  id
 		  rate
@@ -1613,5 +1614,37 @@ url:
 	}
 
 
+## Update Order
+
+	mutation{
+	  updateOrder(id:14, input:{
+	    paymentMethod:"bank"
+	    isCancelled: false
+	    refundRequested: true
+
+
+	  }){
+	    order{
+	      id
+
+	      paymentMethod
+	      status
+	      orderitemSet{
+
+		id
+		product{
+		  id
+		  shop{
+		    id
+		    owner{
+		      id
+		    }
+		  }
+		}
+		quantity
+	      }
+	    }
+	  }
+	}
 
 
