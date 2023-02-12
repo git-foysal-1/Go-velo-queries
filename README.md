@@ -1648,3 +1648,49 @@ url:
 	}
 
 
+## Order Item by Order ID 
+
+	query{
+	  orderItemByOrderId(orderId: 15) {
+	    id
+	    price
+	    quantity
+	    order {
+	      id
+	    }
+	    product {
+	      id
+	      model
+	      brand
+	      shop {
+		id
+		name
+		state
+		street
+	      }
+	      productType {
+		id
+		name
+	      }
+	      image
+	      size {
+		productSize
+	      }
+	      productrateSet {
+		id
+		rate
+		rateType {
+		  id
+		  name
+		}
+	      }
+	      rating
+	      totalReviews
+	      stock
+	      description
+	      isAvailable
+	      createdAt
+	    }
+	  }
+	}
+
