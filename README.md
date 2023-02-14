@@ -942,7 +942,7 @@ url:
 	    size:1
 	    condition:"product conditation"
 	    image: Upload
-	    price:[{rateType:1, rate:100,},{rateType:1, rate:100,}]
+	    prices:[{rateType:1, rate:100,},{rateType:1, rate:100,}]
 
 	  })
 	  {
@@ -993,7 +993,7 @@ url:
 	    stock:500
 	    size:2
 	    condition:"product conditation"
-	    price:[{rateType:2, rate:40,},{rateType:4, rate:800,}]
+	    prices:[{rateType:2, rate:40,},{rateType:4, rate:800,}]
 	    image:Upload
 	  })
 	  {
