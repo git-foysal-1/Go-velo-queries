@@ -787,10 +787,11 @@ url:
 			name
 		      }
 		      image
-		      productsizeSet{
-			id
-			size
-		      }
+		      
+			size{
+			      id
+			      productSize
+			    }
 		      productrateSet{
 			id
 			rate
@@ -1061,9 +1062,9 @@ url:
 	    }
 	 
 	    image
-	    productsizeSet {
+	    size{
 	      id
-	      size
+	      productSize
 	    }
 	    productrateSet {
 	      id
@@ -1140,12 +1141,7 @@ url:
 	}
 
 
-
-
-
-
-
-    
+  
 
 ## Get all product review
 
@@ -1536,10 +1532,10 @@ url:
 		  name
 		}
 		image
-		productsizeSet {
-		  id
-		  size
-		}
+		size{
+		      id
+		      productSize
+		    }
 		productrateSet {
 		  id
 		  rate
@@ -1757,6 +1753,39 @@ url:
 	    success
 	  }
 	}
+
+
+
+## Refund by oser id 
+
+
+	query{
+	  refundByUserId(userId:1){
+	    id
+	    order{
+	      id
+	      user{
+		id
+	      }
+	      status
+	      orderitemSet{
+		id
+		product{
+		  id
+		  brand
+		  productType{
+		    id
+		  }
+		}
+	      }
+	    }
+	    reason
+	    status
+	    createdAt
+
+	  }
+	}
+
 
 
 
