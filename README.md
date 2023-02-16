@@ -1089,7 +1089,15 @@ url:
 
 	
 	query{
-	  products(brand: "", model: "",  shopLocation: "" productTypeId: "", productRateTypeId:"2") {
+	  products(
+    	  model: "",
+	  brand: "", 
+	  shopLocation: "",
+	  productTypeId: "1", 
+	  productRateTypeId:"1",
+          date : "2023-03-20"
+  	  riders: 5
+	  ) {
 	    edges {
 	      node {
 		id
@@ -1106,11 +1114,11 @@ url:
 		  id
 		  name
 		}
+		size{
+		      id
+		      productSize
+		    }
 		
-		productsizeSet {
-		  id
-		  size
-		}
 		productrateSet {
 		  id
 		  rate
@@ -1130,6 +1138,7 @@ url:
 	    }
 	  }
 	}
+
 
 
 
@@ -1693,4 +1702,66 @@ url:
 	    }
 	  }
 	}
+
+## Order Refunds 
+
+	query{
+	  refunds{
+	    id
+	    order{
+	      id
+	      status
+	      orderitemSet{
+		id
+		product{
+		  id
+		  brand
+		  productType{
+		    id
+		  }
+		}
+	      }
+	    }
+	    reason
+	    status
+	    createdAt
+
+	  }
+	}
+
+
+## Create refund request 
+
+	mutation{
+	  createRefund(input:{
+	    orderId:15
+	    reason:"refund request"
+
+	  })
+	  {
+	    success
+	    refund{
+	      id
+
+	      reason
+	      status
+	    }
+	  }
+	}
+
+
+## Delete refund 
+
+	mutation{
+	  deleteRefund(id:3){
+	    success
+	  }
+	}
+
+
+
+
+
+
+
 
