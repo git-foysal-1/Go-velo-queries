@@ -1088,16 +1088,15 @@ url:
 
 ## Product search and filter query: 
 
-	
 	query{
 	  products(
-    	  model: "",
-	  brand: "", 
-	  shopLocation: "",
-	  productTypeId: "1", 
-	  productRateTypeId:"1",
-          date : "2023-03-20"
-  	  riders: 5
+		  model: ""
+		  brand: ""
+		  shopLocation: ""
+		  productTypeId: "1"
+		  productRateTypeId:"1"
+		  date : "2023-03-20"
+		  riders: 5
 	  ) {
 	    edges {
 	      node {
