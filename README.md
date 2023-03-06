@@ -675,16 +675,19 @@ url:
 
  
 	
-        mutation{
+	mutation{
 	  createShop(input:{
 	    name:"New Shop"
-      	    legalEntity:"Shop Legal Entity"
+	    legalEntity:"Shop Legal Entity"
+	    userId:4
 	    street: "Dhaka"
 	    city: "Dhaka City"
 	    state: "Dhaka Uttara"
 	    zipCode :"1230"
 	    areaCode: "1230"
 	    country: "Canada"
+	    latitude:"45.454214"
+	    longitude: "82.544565"
 	    phone: "+85452825"
 	    website: "www.web.com"
 	    email: "shopmail@gmail.com"
@@ -692,28 +695,41 @@ url:
 	    shopImage:Upload
 	    shopCover:Upload
 	    openingTime:Time
-       	    closingTime:Time
+	    closingTime:Time
+
+	    pickupLocations:[
+	    {country:"Bangladesh", city:"Dhaka", state:"Uttara", street:"Uttara",zipCode:"4521", areaCode:"6243",
+	    latitude:"42.545545", longitude: "86.545223"},
+	    {country:"Bangladesh", city:"CTG", state:"Pahartali", street:"Ferozshah",zipCode:"4521", areaCode:"6243",
+	    latitude:"49.545545", longitude: "86.545223"}
+	    ]
 
 	  })
+
 	  {
 	    success
 	  }
+
 	}
 
 
 
 ## Update Shop 
 
-    mutation{
-      updateShop(id:11,input:{
-            name:"New Shop"
-      	    legalEntity:"Shop Legal Entity"
+    
+        mutation{
+	  updateShop(input:{
+	    id:6
+	    name:"New Shop"
+	    legalEntity:"Shop Legal Entity"
 	    street: "Dhaka"
 	    city: "Dhaka City"
 	    state: "Dhaka Uttara"
 	    zipCode :"1230"
 	    areaCode: "1230"
 	    country: "Canada"
+	    latitude:"45.454214"
+	    longitude: "82.544565"
 	    phone: "+85452825"
 	    website: "www.web.com"
 	    email: "shopmail@gmail.com"
@@ -721,17 +737,25 @@ url:
 	    shopImage:Upload
 	    shopCover:Upload
 	    openingTime:Time
-       	    closingTime:Time
-      })
-      {
-        shop{
-          id
-          name
-	  ....
-        }
-        success
-      }
-    }
+	    closingTime:Time
+	    pickupLocations:[
+	    {id:24,country:"Bangladesh", city:"Dhaka", state:"Uttara", street:"Uttara",zipCode:"4521", areaCode:"6243",
+	    latitude:"42.545545", longitude: "86.545223"},
+	    {id:25,country:"Bangladesh", city:"CTG", state:"Pahartali", street:"Ferozshah",zipCode:"4521", areaCode:"6243",
+	    latitude:"49.545545", longitude: "86.545223"}
+	    ]
+
+	  })
+
+	  {
+	    success
+
+	  }
+
+	}
+
+
+
 
 ## Delete Shop 
 
