@@ -247,6 +247,22 @@ url:
     }
 
 # ``#Setup Module ``
+
+## Get countries
+
+
+	query{
+	  countries{
+	    id
+	    name
+	  }
+	}
+
+
+
+
+
+
 ## Get Language & Currencies
 
     query{
@@ -675,17 +691,18 @@ url:
 
  
 	
+
 	mutation{
 	  createShop(input:{
 	    name:"New Shop"
 	    legalEntity:"Shop Legal Entity"
-	    userId:4
+	    userId:2
 	    street: "Dhaka"
 	    city: "Dhaka City"
 	    state: "Dhaka Uttara"
 	    zipCode :"1230"
 	    areaCode: "1230"
-	    country: "Canada"
+	    country: 3
 	    latitude:"45.454214"
 	    longitude: "82.544565"
 	    phone: "+85452825"
@@ -698,9 +715,9 @@ url:
 	    closingTime:Time
 
 	    pickupLocations:[
-	    {country:"Bangladesh", city:"Dhaka", state:"Uttara", street:"Uttara",zipCode:"4521", areaCode:"6243",
+	    {country:"3", city:"Dhaka", state:"Uttara", street:"Uttara",zipCode:"4521", areaCode:"6243",
 	    latitude:"42.545545", longitude: "86.545223"},
-	    {country:"Bangladesh", city:"CTG", state:"Pahartali", street:"Ferozshah",zipCode:"4521", areaCode:"6243",
+	    {country:"3", city:"CTG", state:"Pahartali", street:"Ferozshah",zipCode:"4521", areaCode:"6243",
 	    latitude:"49.545545", longitude: "86.545223"}
 	    ]
 
@@ -708,6 +725,7 @@ url:
 
 	  {
 	    success
+
 	  }
 
 	}
@@ -716,10 +734,9 @@ url:
 
 ## Update Shop 
 
-    
-        mutation{
+    mutation{
 	  updateShop(input:{
-	    id:6
+	    id:2
 	    name:"New Shop"
 	    legalEntity:"Shop Legal Entity"
 	    street: "Dhaka"
@@ -727,7 +744,7 @@ url:
 	    state: "Dhaka Uttara"
 	    zipCode :"1230"
 	    areaCode: "1230"
-	    country: "Canada"
+	    country: 3
 	    latitude:"45.454214"
 	    longitude: "82.544565"
 	    phone: "+85452825"
@@ -738,10 +755,11 @@ url:
 	    shopCover:Upload
 	    openingTime:Time
 	    closingTime:Time
+
 	    pickupLocations:[
-	    {id:24,country:"Bangladesh", city:"Dhaka", state:"Uttara", street:"Uttara",zipCode:"4521", areaCode:"6243",
+	    {id:15,country:"3", city:"Dhaka", state:"Uttara", street:"Uttara",zipCode:"4521", areaCode:"6243",
 	    latitude:"42.545545", longitude: "86.545223"},
-	    {id:25,country:"Bangladesh", city:"CTG", state:"Pahartali", street:"Ferozshah",zipCode:"4521", areaCode:"6243",
+	    {id:16, country:"3", city:"CTG", state:"Pahartali", street:"Ferozshah",zipCode:"4521", areaCode:"6243",
 	    latitude:"49.545545", longitude: "86.545223"}
 	    ]
 
