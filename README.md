@@ -631,8 +631,8 @@ url:
 
 ## Get All Shops 
 
-    query{
-	  shops{
+	query{
+	  shops {
 	    edges {
 	      node {
 		id
@@ -642,7 +642,10 @@ url:
 		state
 		zipCode
 		areaCode
-		country
+		country {
+		  id
+		  name
+		}
 		phone
 		website
 		email
@@ -657,7 +660,6 @@ url:
 		  name
 		  email
 		}
-
 		productSet {
 		  edges {
 		    node {
@@ -681,10 +683,30 @@ url:
 		    }
 		  }
 		}
+		pickuplocationSet{
+		  edges{
+		    node{
+		      id
+		      country{
+			id
+			name
+
+		      }
+		      state
+		      street
+		      city
+		      areaCode
+		      zipCode
+		      latitude
+		      longitude
+		    }
+		  }
+		}
 	      }
 	    }
 	  }
 	}
+
 
 
 ## Create New Shop 
@@ -797,7 +819,7 @@ url:
 		state
 		zipCode
 		areaCode
-		country
+		country {id name }
 		phone
 		website
 		email
