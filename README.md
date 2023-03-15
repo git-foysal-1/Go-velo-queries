@@ -632,7 +632,7 @@ url:
 ## Get All Shops 
 
 	query{
-	  shops {
+	  shops{
 	    edges {
 	      node {
 		id
@@ -642,10 +642,7 @@ url:
 		state
 		zipCode
 		areaCode
-		country {
-		  id
-		  name
-		}
+		country 
 		phone
 		website
 		email
@@ -687,11 +684,7 @@ url:
 		  edges{
 		    node{
 		      id
-		      country{
-			id
-			name
-
-		      }
+		      country
 		      state
 		      street
 		      city
@@ -706,7 +699,6 @@ url:
 	    }
 	  }
 	}
-
 
 
 ## Create New Shop 
@@ -724,7 +716,7 @@ url:
 	    state: "Dhaka Uttara"
 	    zipCode :"1230"
 	    areaCode: "1230"
-	    country: 3
+	    country: "Bangladesh"
 	    latitude:"45.454214"
 	    longitude: "82.544565"
 	    phone: "+85452825"
@@ -737,9 +729,9 @@ url:
 	    closingTime:Time
 
 	    pickupLocations:[
-	    {country:"3", city:"Dhaka", state:"Uttara", street:"Uttara",zipCode:"4521", areaCode:"6243",
+	    {country:"Bangladesh", city:"Dhaka", state:"Uttara", street:"Uttara",zipCode:"4521", areaCode:"6243",
 	    latitude:"42.545545", longitude: "86.545223"},
-	    {country:"3", city:"CTG", state:"Pahartali", street:"Ferozshah",zipCode:"4521", areaCode:"6243",
+	    {country:"Bangladesh", city:"CTG", state:"Pahartali", street:"Ferozshah",zipCode:"4521", areaCode:"6243",
 	    latitude:"49.545545", longitude: "86.545223"}
 	    ]
 
@@ -766,7 +758,7 @@ url:
 	    state: "Dhaka Uttara"
 	    zipCode :"1230"
 	    areaCode: "1230"
-	    country: 3
+	    country: "bangladesh"
 	    latitude:"45.454214"
 	    longitude: "82.544565"
 	    phone: "+85452825"
@@ -779,9 +771,9 @@ url:
 	    closingTime:Time
 
 	    pickupLocations:[
-	    {id:15,country:"3", city:"Dhaka", state:"Uttara", street:"Uttara",zipCode:"4521", areaCode:"6243",
+	    {id:15,country:"bangladesh", city:"Dhaka", state:"Uttara", street:"Uttara",zipCode:"4521", areaCode:"6243",
 	    latitude:"42.545545", longitude: "86.545223"},
-	    {id:16, country:"3", city:"CTG", state:"Pahartali", street:"Ferozshah",zipCode:"4521", areaCode:"6243",
+	    {id:16, country:"Bangladesh", city:"CTG", state:"Pahartali", street:"Ferozshah",zipCode:"4521", areaCode:"6243",
 	    latitude:"49.545545", longitude: "86.545223"}
 	    ]
 
@@ -819,7 +811,7 @@ url:
 		state
 		zipCode
 		areaCode
-		country {id name }
+		country
 		phone
 		website
 		email
