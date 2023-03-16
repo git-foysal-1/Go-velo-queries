@@ -1153,6 +1153,11 @@ url:
 		  productRateTypeId:"1"
 		  date : "2023-03-20"
 		  riders: 5
+		  latMin: "45.45454"
+  		  latMax: "60.56655"
+  		  lonMin: "50.45454"
+ 		  lonMax: "60.45421"
+  
 	  ) {
 	    edges {
 	      node {
